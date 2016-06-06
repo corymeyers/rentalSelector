@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewRental = false,
+  addNewRental: false,
   actions: {
     rentalFormShow() {
       this.set('addNewRental', true);
@@ -19,5 +19,4 @@ export default Ember.Component.extend({
       this.sendAction('save2', params);
     }
   }
-
 });
