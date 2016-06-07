@@ -1,19 +1,10 @@
-{{yield}}
-
-<!-- <li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city}} {{/link-to}}
+<li>
+  {{rentalInComponent.owner}}'s {{rentalInComponent.type}} in {{rentalInComponent.city}}
   {{#if isImageShowing}}
-    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
-  {{else}}
-    <button {{action 'imageShow'}}>Image</button>
-  {{/if}}
-</li> -->
-
-<li>{{rental.owner}}'s {{rental.type}} in {{rental.city}}
-  {{#if isImageShowing}}
-    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
+    <p><img src={{rentalInComponent.image}} alt={{rentalInComponent.type}} {{action 'imageHide'}}></p>
   {{else}}
     <button {{action 'imageShow'}}>Image</button>
     {{/if}}
-    {{update-rental rental=rental update='update'}}
-    <button {{action 'delete' rental}}>Delete</button>
+    {{update-rental rental=rentalInComponent update='update'}}
+    <button {{action 'delete' rentalInComponent}}>Delete</button>
   </li>

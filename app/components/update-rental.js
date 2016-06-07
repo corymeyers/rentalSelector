@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   updateRentalForm: false,
   actions: {
     updateRentalForm() {
-      this.set('updateRentalForm', false);
+      this.set('updateRentalForm', true);
     },
     update(rental) {
       var params = {
